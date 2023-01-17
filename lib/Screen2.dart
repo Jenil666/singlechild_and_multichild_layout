@@ -230,7 +230,7 @@ class _Screen2State extends State<Screen2> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 280,top: 600),
-              child: Container(˚
+              child: Container(
                 height: 70,
                 width: 70,
                 alignment: Alignment.center,
