@@ -99,130 +99,147 @@ class _Screen2State extends State<Screen2> {
         shadowColor: Colors.white54,
       ),
       body: SingleChildScrollView(
-        child: Column(
+        child: Stack(
           children: [
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-              height: 70,
-              width: double.infinity,
-              child: Row(
-                children: [
-                  Column(
+            Column(
+              children: [
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: 70,
+                  width: double.infinity,
+                  child: Row(
                     children: [
-                      Stack(
+                      Column(
                         children: [
-                          Container(
-                            margin: EdgeInsets.only(
-                                left: 20, right: 10, top: 10, bottom: 10),
-                            height: 50,
-                            width: 50,
-                            child: CircularProgressIndicator(
-                              backgroundColor: Colors.white,
-                              value: 0.93,
-                              color: Colors.amber,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 30, top: 25),
-                            child: Text(
-                              "93%",
-                              style: TextStyle(fontSize: 15, color: Colors.amber),
-                            ),
+                          Stack(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(
+                                    left: 20, right: 10, top: 10, bottom: 10),
+                                height: 50,
+                                width: 50,
+                                child: CircularProgressIndicator(
+                                  backgroundColor: Colors.white,
+                                  value: 0.93,
+                                  color: Colors.amber,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 30, top: 25),
+                                child: Text(
+                                  "93%",
+                                  style: TextStyle(fontSize: 15, color: Colors.amber),
+                                ),
+                              )
+                            ],
                           )
                         ],
-                      )
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(top: 8),
+                        height: 60,
+                        width: 129,
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Text(
+                                  "Storage",
+                                  style: TextStyle(fontSize: 15, color: Colors.white),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  "110.74GB",
+                                  style: TextStyle(fontSize: 15, color: Colors.amber),
+                                ),
+                                Text(
+                                  "/118.49GB",
+                                  style:
+                                  TextStyle(fontSize: 15, color: Colors.white54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      Expanded(child: SizedBox()),
+                      Icon(
+                        Icons.chevron_right,
+                        color: Colors.white54,
+                      ),
+                      SizedBox(
+                        width: 15,
+                      ),
                     ],
                   ),
-                  Container(
-                    padding: EdgeInsets.only(top: 8),
-                    height: 60,
-                    width: 129,
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Text(
-                              "Storage",
-                              style: TextStyle(fontSize: 15, color: Colors.white),
-                            ),
-                          ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Divider(
+                  color: Colors.white24,
+                  height: 3,
+                  thickness: 5,
+                ),
+                Container(
+                  height: 60,
+                  width: double.infinity,
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text(
+                        "Internal storage",
+                        style: TextStyle(fontSize: 15, color: Colors.white54),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 3),
+                        child: Icon(
+                          Icons.chevron_right,
+                          color: Colors.white54,
                         ),
-                        Row(
-                          children: [
-                            Text(
-                              "110.74GB",
-                              style: TextStyle(fontSize: 15, color: Colors.amber),
-                            ),
-                            Text(
-                              "/118.49GB",
-                              style:
-                              TextStyle(fontSize: 15, color: Colors.white54),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                      ),
+                      Expanded(child: SizedBox()),
+                      Icon(
+                        Icons.menu_open_sharp,
+                        color: Colors.white54,
+                      ),
+                      SizedBox(
+                        width: 8,
+                      ),
+                      Icon(
+                        Icons.more_vert,
+                        color: Colors.white54,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                    ],
                   ),
-                  Expanded(child: SizedBox()),
-                  Icon(
-                    Icons.chevron_right,
-                    color: Colors.white54,
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                ],
+                ),
+                Column(
+                  children: inf.asMap().entries.map((e) => fol(inf[e.key], det[e.key])).toList(),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 280,top: 600),
+              child: Container(˚
+                height: 70,
+                width: 70,
+                alignment: Alignment.center,
+                child: Icon(Icons.cleaning_services_sharp,color: Colors.white,size: 50,),
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(100),
+                ),
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Divider(
-              color: Colors.white24,
-              height: 3,
-              thickness: 5,
-            ),
-            Container(
-              height: 60,
-              width: double.infinity,
-              child: Row(
-                children: [
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Internal storage",
-                    style: TextStyle(fontSize: 15, color: Colors.white54),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 3),
-                    child: Icon(
-                      Icons.chevron_right,
-                      color: Colors.white54,
-                    ),
-                  ),
-                  Expanded(child: SizedBox()),
-                  Icon(
-                    Icons.menu_open_sharp,
-                    color: Colors.white54,
-                  ),
-                  SizedBox(
-                    width: 8,
-                  ),
-                  Icon(
-                    Icons.more_vert,
-                    color: Colors.white54,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                ],
-              ),
-            ),
-            Column(
-              children: inf.asMap().entries.map((e) => fol(inf[e.key], det[e.key])).toList(),
             ),
           ],
         ),
@@ -264,7 +281,8 @@ class _Screen2State extends State<Screen2> {
           ),
           Expanded(child: SizedBox()),
           Icon(Icons.chevron_right_outlined,color: Colors.white54,),
-          SizedBox(width: 10,),        ],
+          SizedBox(width: 10,),
+        ],
       ),
     );
   }
