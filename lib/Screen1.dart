@@ -154,7 +154,7 @@ class _Screen1State extends State<Screen1> {
                 Container(
                   padding: EdgeInsets.only(top: 8),
                   height: 60,
-                  width: 129,
+                  width: 138,
                   child: Column(
                     children: [
                       Row(
@@ -244,7 +244,7 @@ class _Screen1State extends State<Screen1> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: l1i.asMap().entries.map((e) => fol(l1i[e.key], l1n[e.key])).toList(),
+            children: l1i.asMap().entries.map((e) => fol(l1i[e.key], l1n[ e.key])).toList(),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

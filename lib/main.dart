@@ -10,7 +10,7 @@ void main()
     MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context)=>Screen3(),
+        '/':(context)=>Screen1(),
       },
     ),
   );
