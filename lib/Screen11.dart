@@ -107,12 +107,12 @@ class _Screen11State extends State<Screen11> {
                 ),
               ),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 10,),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(width: 10,),
                       Text("Item",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
                       SizedBox(width: 10,),
                       Icon(Icons.delete,color: Colors.red,)
