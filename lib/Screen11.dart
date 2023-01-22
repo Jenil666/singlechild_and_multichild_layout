@@ -24,15 +24,28 @@ class _Screen11State extends State<Screen11> {
          body: Column(
            children: [
              Container(
-               width: double.infinity,
                height: 604,
-               child: Row(
-                 children: [
-                   Column(
-                     children: [
-                     ],
-                   )
-                 ],
+               width: double.infinity,
+               child: SingleChildScrollView(
+                 child: Column(
+                   children: [
+                     con(),
+                     con(),
+                     con(),
+                     con(),
+                     con(),
+                     con(),
+                     con(),
+                     con(),
+                     con(),
+                     con(),
+                     con(),
+                     con(),
+                     con(),
+                     con(),
+                     con(),
+                   ],
+                 ),
                ),
              ),
             Container(
